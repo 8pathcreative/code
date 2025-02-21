@@ -7,7 +7,7 @@ export function About() {
         <div className="lg:grid lg:grid-cols-2 lg:gap-8">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              About Code Resources
+              About Code Tutorials
             </h2>
             <p className="mt-3 text-lg text-gray-500">
               Code Resources is a curated collection of the best resources for designers and developers.
