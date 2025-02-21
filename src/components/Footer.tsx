@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Github } from 'lucide-react';
 
@@ -35,7 +35,7 @@ export function Footer() {
                   <li>
                     <Link to="/?category=design" className="text-sm text-gray-500 hover:text-gray-900">
                       Design
-                    </Link>
+                  </Link>
                   </li>
                   <li>
                     <Link to="/?category=development" className="text-sm text-gray-500 hover:text-gray-900">

@@ -7,7 +7,7 @@ type ResourceCardProps = {
 };
 
 export function ResourceCard({ resource }: ResourceCardProps) {
-  const Icon = Icons[resource.icon as keyof typeof Icons] || Icons.Link;
+  const Icon = (Icons[resource.icon as keyof typeof Icons] || Icons.Link) as React.ComponentType<{ className?: string }>;
 
   return (
     <div className="bg-card rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
@@ -17,7 +17,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
             <Icon className="w-6 h-6 text-primary" />
           </div>
           <div className="flex-1">
-            <h3 className="text-lg font-semibold mb-2 text-card-foreground">{resource.title}</h3>
+            <h2 className="text-lg font-semibold mb-2 text-card-foreground">{resource.title}</h2>
             <p className="text-muted-foreground mb-4">{resource.description}</p>
             <a
               href={resource.url}

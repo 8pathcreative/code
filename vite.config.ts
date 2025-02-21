@@ -1,9 +1,21 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-
-// https://vitejs.dev/config/
+import checker from 'vite-plugin-checker';
+import { createHtmlPlugin } from 'vite-plugin-html';
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    checker({ typescript: true }),
+    createHtmlPlugin({
+      minify: true,
+      inject: {
+        data: {
+          title: 'Code Tutorials',
+          description: 'A curated collection of the best resources for designers and developers.',
+        },
+      },
+    }),
+  ],
   optimizeDeps: {
     exclude: ['lucide-react'],
   },

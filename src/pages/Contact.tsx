@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Contact: React.FC = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log({ name, email, message });
+  };
+
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
-      <form className="space-y-4">
+      <form className="space-y-4" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">
             Name
@@ -12,7 +22,10 @@ const Contact: React.FC = () => {
           <input
             type="text"
             id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             className="mt-1 block w-full border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            aria-label="Name"
           />
         </div>
         <div>
@@ -22,7 +35,10 @@ const Contact: React.FC = () => {
           <input
             type="email"
             id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="mt-1 block w-full border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            aria-label="Email"
           />
         </div>
         <div>
@@ -32,7 +48,10 @@ const Contact: React.FC = () => {
           <textarea
             id="message"
             rows={4}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             className="mt-1 block w-full border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            aria-label="Message"
           ></textarea>
         </div>
         <div>
@@ -49,4 +68,3 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
-
