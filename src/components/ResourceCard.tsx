@@ -43,7 +43,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
 
             {resource.tags.length > 0 && (
               <div className="mt-4 flex flex-wrap gap-2" role="list" aria-label="Resource tags">
-                {resource.tags.map((tag, index) => (
+                {resource.tags.map((tag: string, index: number) => (
                   <span 
                     key={index}
                     className="bg-secondary text-secondary-foreground px-2 py-1 rounded-full text-sm"
