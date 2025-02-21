@@ -29,11 +29,11 @@ export function ResourceCard({ resource }: ResourceCardProps) {
               <Icons.ExternalLink className="w-4 h-4" />
             </a>
             <div className="mt-4 flex flex-wrap gap-2">
-              {resource.tags.map((tag, index) => (
-          <span key={index} className="bg-secondary text-secondary-foreground px-2 py-1 rounded-full text-sm">
-            {tag}
-          </span>
-              ))}
+                {resource.tags?.map((tag: string, index: number) => (
+                  <span key={index} className="bg-secondary text-secondary-foreground px-2 py-1 rounded-full text-sm">
+                    {tag}
+                  </span>
+                ))}
             </div>
           </div>
         </div>
