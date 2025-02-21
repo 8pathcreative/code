@@ -11,7 +11,7 @@ export default defineConfig({
       inject: {
         data: {
           title: 'Code Tutorials',
-          description: 'A curated collection of the best resources for designers and developers.',
+          description: 'A curated collection of the best resources for designers and developers. This platform provides a searchable directory of tutorials, tools, and learning materials to help developers and designers enhance their skills.',
         },
       },
     }),
