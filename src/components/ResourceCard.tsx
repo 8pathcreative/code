@@ -18,7 +18,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
       <div className="p-6">
         <div className="flex items-start gap-4">
           <div className="p-2 bg-primary/10 rounded-lg" aria-hidden="true">
-            <Icon className="w-6 h-6 text-primary" aria-hidden="true" />
+            <Icon className="w-6 h-6 text-primary" aria-hidden={true} />
           </div>
           
           <div className="flex-1">

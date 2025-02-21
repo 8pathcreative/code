@@ -10,6 +10,7 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import Advertise from './pages/Advertise';
 
 function App() {
   const setUser = useAuthStore((state) => state.setUser);
