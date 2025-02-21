@@ -8,8 +8,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
-import { Contact } from './pages/Contact';
-
+import Contact from './pages/Contact';
 
 function App() {
   const setUser = useAuthStore((state) => state.setUser);
@@ -51,4 +50,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
